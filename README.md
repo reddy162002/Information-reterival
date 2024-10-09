@@ -5,15 +5,15 @@ This project's main objective is to construct a text parser, the building block 
 
 ## Key Features
 
-- **Tokenizer:** Splits text into individual tokens, removes numbers, and converts all tokens to lowercase.
+ **Tokenizer:** Splits text into individual tokens, removes numbers, and converts all tokens to lowercase.
   
-- **Stopwords Removal:** Filters out common stopwords from the token list to improve the relevance of the results.
+ **Stopwords Removal:** Filters out common stopwords from the token list to improve the relevance of the results.
   
-- **Stemming:** Uses the Porter stemming algorithm to reduce words to their base or root forms.
+ **Stemming:** Uses the Porter stemming algorithm to reduce words to their base or root forms.
   
-- **Word Dictionary:** Maps each unique token to a unique ID.
+ **Word Dictionary:** Maps each unique token to a unique ID.
   
-- **File Dictionary:** Assigns a unique ID to each document processed.
+ **File Dictionary:** Assigns a unique ID to each document processed.
 
 ## Processed Input and Output
 
@@ -62,7 +62,7 @@ pip install nltk
 
 ### Running the Script:
 
-Run the `Project1_PythonCode.py` script. Every `.txt} file in the `input_files} directory will be processed, the text will be tokenized, stopwords will be removed, and the remaining tokens will be stemmed. Three files, `parser_output.txt}, `WordDictionary.txt}, and `FileDictionary.txt}, will contain the output..
+Run the `chandumukkamala.py` script. Every `.txt} file in the `Input_Files} directory will be processed, the text will be tokenized, stopwords will be removed, and the remaining tokens will be stemmed. Three files, `parser_output.txt}, `WordDictionary.txt}, and `FileDictionary.txt}, will contain the output..
 
 ### Output Files:
 
