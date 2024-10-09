@@ -22,9 +22,9 @@ The output from the processed input files is saved into `parser_output.txt`.
 ## Project Files Included
 
 The following files are included in this project:
-**Project1_PythonCode.py:** This is the main Python script that contains all the necessary functionality for text parsing.
+**chandumukkamala.py:** This is the main Python script that contains all the necessary functionality for text parsing.
   
-**input_files:** A folder containing all `.txt` input files that need to be parsed.
+**Input_Files:** A folder containing all `.txt` input files that need to be parsed.
 
 **stopwordlist.txt:** A file containing a list of common stopwords.
   
