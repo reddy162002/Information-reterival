@@ -1,81 +1,66 @@
-# Information-reterival
 # Text Parser for Information Retrieval (IR) Engine
 
-This project's main objective is to construct a text parser, the building block of an information retrieval (IR) engine. The parser does more than just analyze text documents; it also tokenizes the content, removes stopwords, and stems the words that remain. Additionally, it generates both word and file dictionaries.
+## Overview
 
-## Key Features
+This project is a text parser designed as a foundational tool for an Information Retrieval (IR) engine. The parser tokenizes text, removes stopwords, and applies stemming to reduce words to their root forms. It also generates unique word and file dictionaries, associating each word and document with a unique ID. The parsed data is saved in the `parser_output.txt` file, with additional output files for word and file IDs.
 
- **Tokenizer:** Splits text into individual tokens, removes numbers, and converts all tokens to lowercase.
-  
- **Stopwords Removal:** Filters out common stopwords from the token list to improve the relevance of the results.
-  
- **Stemming:** Uses the Porter stemming algorithm to reduce words to their base or root forms.
-  
- **Word Dictionary:** Maps each unique token to a unique ID.
-  
- **File Dictionary:** Assigns a unique ID to each document processed.
+## Features
 
-## Processed Input and Output
+1. **Tokenizer**: 
+   - Tokenizes text by splitting it into lowercase words.
+   - Filters out numbers and special characters.
+   
+2. **Stopword Removal**: 
+   - Removes common stopwords using a predefined stopword list.
+   
+3. **Stemming**: 
+   - Applies the Porter stemming algorithm to reduce words to their base or root form.
 
-The output from the processed input files is saved into `parser_output.txt`.
+4. **Word Dictionary**: 
+   - Each unique word is assigned a unique ID and saved in `WordDictionary.txt`.
+   
+5. **File Dictionary**: 
+   - Each document is assigned a unique ID and saved in `FileDictionary.txt`.
 
-## Project Files Included
+## Project Files
 
-The following files are included in this project:
-**chandumukkamala.py:** This is the main Python script that contains all the necessary functionality for text parsing.
-  
-**Input_Files:** A folder containing all `.txt` input files that need to be parsed.
+- **Python_Code**: Main Python script that contains all the parsing functionality.
+- **input_files**: Folder where the input text files to be parsed are stored.
+- **stopwordlist.txt**: A file containing stopwords to be filtered out during parsing.
+- **parser_output.txt**: File containing parsed output with word and document IDs.
+- **WordDictionary.txt**: Dictionary mapping each unique word to a unique ID.
+- **FileDictionary.txt**: Dictionary mapping each file name to a unique ID.
 
-**stopwordlist.txt:** A file containing a list of common stopwords.
-  
-**parser_output.txt:** The file where the parsed results are stored.
-  
-**WordDictionary.txt:** Contains the unique words along with their corresponding IDs.
-  
-**FileDictionary.txt:** Maps document names to their unique IDs.
+## Requirements
 
-## Project Requirements
+### Python Version:
+- Python 3.x or higher is required.
 
-### Python Version
-
- Python 3.x or higher is required.
-
-### Python Libraries
-
- **nltk:** This library is essential for stemming operations.
-
-### How to Install the Required Packages
-
-To install the necessary library, you can run the following command:
+### Python Libraries:
+- `nltk`: Required for stemming. Install it by running:
 
 ```bash
 pip install nltk
 ```
 
-## Instructions for Running the Program
+## How to Use
 
-### Preparing Input Files:
-
-1. Put all of the `.txt} files that need to be parsed in a folder called `Input_Files}.
-2. Verify that the file named `stopwordlist.txt` is situated in the proper location.
+### Input Files:
+1. Put all of the `.txt} files in the `input_files} folder that require parsing.
+2. Verify that the stopwords to be filtered out are contained in the `stopwordlist.txt` file, one stopword per line.
 
 
 ### Running the Script:
+1. Run the `Python_Code.py` script. 
+   ```bash
+   python Python_Code.py
+   ```
+2. The script will process each `.txt` file in the `input_files` folder, tokenize the content, remove stopwords, stem the words, and save the output to:
+   - `parser_output.txt`: Contains the parsed document text with word and document IDs.
+   - `WordDictionary.txt`: Lists unique words and their respective IDs.
+   - `FileDictionary.txt`: Lists document names and their respective IDs.
 
-Run the `chandumukkamala.py` script. Every `.txt} file in the `Input_Files} directory will be processed, the text will be tokenized, stopwords will be removed, and the remaining tokens will be stemmed. Three files, `parser_output.txt}, `WordDictionary.txt}, and `FileDictionary.txt}, will contain the output..
-
-### Output Files:
-
-After executing the script, you will find the following output files:
-
- **parser_output.txt:** This file contains document IDs and tokens along with their corresponding unique IDs.
-  
- **WordDictionary.txt:** Contains the list of unique tokens and their respective IDs.
-  
- **FileDictionary.txt:** Contains document names and their assigned unique IDs.
-
-### Example of Output (from `parser_output.txt`):
-
+### Example Output (from `parser_output.txt`):
 ```txt
 Document: sample1.txt, ID: 1
 example    1
@@ -86,15 +71,17 @@ Document: sample2.txt, ID: 2
 ...
 ```
 
-## Troubleshooting Tips
+## Troubleshooting
 
-Verify that there are legitimate `.txt} files in the {input_files} directory and that they are not empty.
-Verify that every stopword is listed on a distinct line in the `stopwordlist.txt` file, and that the file format is correct.
+1. **Input directory not found**:
+   - Ensure that the `input_files` directory exists and contains valid `.txt` files.
+
+2. **Stopwords file not found**:
+   - Verify that the `stopwordlist.txt` file is located in the correct directory.
 
 
 
-**Author Information:**
+## Author Information
 
-**Name:** Harichandana Mukkamala  
-**Email:** Harichandana Mukkamala@my.unt.edu
-
+**Name**: Namitha Padigapati  
+**Email**: NamithaPadigapati@my.unt.edu
